@@ -86,7 +86,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                   Visibility(
                     visible: _index < 3,
                     replacement: ElevatedButton(
-                      onPressed: () => null,
+                      onPressed: () => Navigator.pushReplacementNamed(context, '/home_screen'),
                       style: ElevatedButton.styleFrom(
                           minimumSize: Size(double.infinity, 55),
                           backgroundColor: kPrimaryBlue),

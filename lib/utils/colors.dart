@@ -5,6 +5,7 @@ Color kWhiteColor = const Color(0XFFF5F5F5);
 Color kSecondaryPurple = const Color(0XFFE5CAFF);
 Color kSecondaryGreen = const Color(0XFFB5EDD4);
 Color kSecondaryBlue = const Color(0XFFD3F5FF);
+Color kSecondaryRed = const Color(0XFFFFC2AF);
 Color kPrimaryPurple = const Color(0XFF62249F);
 Color kPrimaryGreen = const Color(0XFF097947);
 Color kPrimaryBlue = const Color(0XFF01536B);

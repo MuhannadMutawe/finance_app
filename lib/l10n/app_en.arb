@@ -7,5 +7,12 @@
   "title2" : "Your wallet is safe and your money is safe!",
   "subTitle2" : "Whether you're paying, saving, or investing — with us, everything is in its right place ✅",
   "title3" : "Earn more and advance faster!",
-  "subTitle3" : "With our smart financial services, easily track your balance growth and enjoy managing your money from anywhere.💡"
+  "subTitle3" : "With our smart financial services, easily track your balance growth and enjoy managing your money from anywhere.💡",
+  "appBarTitle" : "Finance",
+  "sliderLabel1" : "My Balance",
+  "sliderLabel2" : "Today",
+  "plus" : "Plus",
+  "minus" : "Minus",
+  "activity" : "Activity",
+  "seeAll" : "See All"
 }
