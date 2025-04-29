@@ -15,7 +15,7 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     // TODO: implement initState
     super.initState();
-    Future.delayed(Duration(seconds: 5),() => Navigator.pushReplacementNamed(context,'/home_screen'),);
+    Future.delayed(Duration(seconds: 3),() => Navigator.pushReplacementNamed(context,'/on_boarding_screen'),);
   }
 
   @override
@@ -27,7 +27,7 @@ class _SplashScreenState extends State<SplashScreen> {
           children: [
             SvgPicture.asset('assets/images/logo.svg'),
             SizedBox(height: 20,),
-            Text('Finance',style: Theme.of(context).textTheme.displayMedium!.copyWith(color: kPrimaryGreen),)
+            Text('Finance',style: Theme.of(context).textTheme.headlineMedium!.copyWith(color: kPrimaryGreen),)
           ],
         ),
       ),
