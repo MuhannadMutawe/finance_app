@@ -1,3 +1,11 @@
 {
-  "test" : "Test"
+  "skip" : "Skip",
+  "next" : "Next",
+  "start" : "Start",
+  "title1" : "Invest today and watch your money grow!",
+  "subTitle1" : "With our smart financial services, you're one step closer to achieving your financial goals.💰✨",
+  "title2" : "Your wallet is safe and your money is safe!",
+  "subTitle2" : "Whether you're paying, saving, or investing — with us, everything is in its right place ✅",
+  "title3" : "Earn more and advance faster!",
+  "subTitle3" : "With our smart financial services, easily track your balance growth and enjoy managing your money from anywhere.💡"
 }
