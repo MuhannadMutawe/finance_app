@@ -75,7 +75,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           radius: 25,
                           backgroundColor: index % 2 == 0 ? kPrimaryGreen : kPrimaryRed,
                         ),
-                        SizedBox(width: 12,),
+                        SizedBox(width: 18,),
                         Column(
                           children: [
                             Text('sf fas ',style: Theme.of(context).textTheme.bodyLarge,),
