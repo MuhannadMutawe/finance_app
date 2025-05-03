@@ -1,10 +1,15 @@
+import 'package:finance/data/models/finance_model.dart';
 import 'package:finance/screens/home_screen.dart';
 import 'package:finance/screens/on_boarding_screen.dart';
 import 'package:finance/screens/splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localization.dart';
+import 'package:hive_flutter/hive_flutter.dart';
 
-void main(){
+void main() async {
+  await Hive.initFlutter();
+  await Hive.openBox('financeBox');
+  Hive.registerAdapter(FinanceModelAdapter());
   runApp(const MyApp());
 }
 
