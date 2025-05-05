@@ -14,5 +14,8 @@
   "plus" : "Plus",
   "minus" : "Minus",
   "activity" : "Activity",
-  "seeAll" : "See All"
+  "seeAll" : "See All",
+  "details" : "Details ...",
+  "done" : "Done",
+  "cancel" : "Cancel"
 }

@@ -12,6 +12,7 @@ class HomeBottoms extends StatelessWidget {
       children: [
         Expanded(
           child: GestureDetector(
+            onTap: () => Navigator.pushNamed(context, '/add_commitment_screen'),
             child: Container(
               padding: EdgeInsets.all(14),
               decoration: BoxDecoration(
