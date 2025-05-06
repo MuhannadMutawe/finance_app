@@ -1,5 +1,4 @@
 import 'package:finance/data/models/finance_model.dart';
-import 'package:finance/screens/add_commitment_screen.dart';
 import 'package:finance/screens/home_screen.dart';
 import 'package:finance/screens/on_boarding_screen.dart';
 import 'package:finance/screens/splash_screen.dart';
@@ -28,7 +27,6 @@ class MyApp extends StatelessWidget {
       routes: {
         '/home_screen' : (context) => const HomeScreen(),
         '/on_boarding_screen' : (context) => const OnBoardingScreen(),
-        '/add_commitment_screen' : (context) => const AddCommitmentScreen(),
       },
     );
   }

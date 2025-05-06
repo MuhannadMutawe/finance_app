@@ -1,3 +1,4 @@
+import 'package:finance/screens/add_commitment_screen.dart';
 import 'package:flutter/material.dart';
 
 import '../utils/colors.dart';
@@ -12,7 +13,7 @@ class HomeBottoms extends StatelessWidget {
       children: [
         Expanded(
           child: GestureDetector(
-            onTap: () => Navigator.pushNamed(context, '/add_commitment_screen'),
+            onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => AddCommitmentScreen(isPlus: true),)),
             child: Container(
               padding: EdgeInsets.all(14),
               decoration: BoxDecoration(
@@ -33,6 +34,7 @@ class HomeBottoms extends StatelessWidget {
         SizedBox(width: 25,),
         Expanded(
           child: GestureDetector(
+            onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => AddCommitmentScreen(isPlus: false),)),
             child: Container(
               padding: EdgeInsets.all(14),
               decoration: BoxDecoration(
