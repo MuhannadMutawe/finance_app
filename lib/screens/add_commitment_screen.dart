@@ -4,7 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localization.dart';
 
 class AddCommitmentScreen extends StatefulWidget {
-  const AddCommitmentScreen({super.key});
+  const AddCommitmentScreen({super.key, required this.isPlus});
+  final bool isPlus;
 
   @override
   State<AddCommitmentScreen> createState() => _AddCommitmentScreenState();
@@ -17,7 +18,7 @@ class _AddCommitmentScreenState extends State<AddCommitmentScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(AppLocalizations.of(context)!.plus),
+        title: Text(widget.isPlus ? AppLocalizations.of(context)!.plus : AppLocalizations.of(context)!.minus),
         titleSpacing: 0,
         leading: IconButton(
           onPressed: () => Navigator.pop(context),
@@ -65,16 +66,16 @@ class _AddCommitmentScreenState extends State<AddCommitmentScreen> {
                     child: Container(
                       padding: EdgeInsets.all(16),
                       decoration: BoxDecoration(
-                          color: kSecondaryGreen,
+                          color: widget.isPlus ? kSecondaryGreen : kSecondaryRed,
                           borderRadius: BorderRadius.circular(14)),
                       child: Center(
                         child: Text(
-                          _numbers == '' ? '+ 0.0' : _numbers,
+                          _numbers == '' ? widget.isPlus ? '+ 0.0' : '- 0.0' : widget.isPlus ? '+ $_numbers' : '- $_numbers',
                           textDirection: TextDirection.ltr,
                           style: Theme.of(context)
                               .textTheme
                               .headlineMedium!
-                              .copyWith(color: kPrimaryGreen),
+                              .copyWith(color: widget.isPlus ? kPrimaryGreen : kPrimaryRed ),
                         ),
                       ),
                     ),
