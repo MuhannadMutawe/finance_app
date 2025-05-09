@@ -1,3 +1,4 @@
+import 'package:finance/screens/see_all.dart';
 import 'package:finance/utils/colors.dart';
 import 'package:finance/widget/Home_bottoms.dart';
 import 'package:finance/widget/home_item_balance.dart';
@@ -52,7 +53,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                   Spacer(),
                   TextButton(
-                    onPressed: () {},
+                    onPressed: () => Navigator.push(context, MaterialPageRoute(builder: (context) => SeeAll(),)),
                     child: Text(
                       AppLocalizations.of(context)!.seeAll,
                       style: Theme.of(context).textTheme.titleMedium,
