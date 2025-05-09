@@ -10,7 +10,7 @@ final class FetchDataLoading extends FetchDataState {}
 final class FetchDataSuccess extends FetchDataState {}
 
 final class FetchDataFailure extends FetchDataState {
-  String error;
+  final String error;
 
   FetchDataFailure(this.error);
 }

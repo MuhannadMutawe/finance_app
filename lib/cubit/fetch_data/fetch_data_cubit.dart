@@ -7,12 +7,12 @@ part 'fetch_data_state.dart';
 
 class FetchDataCubit extends Cubit<FetchDataState>{
   FetchDataCubit() : super(FetchDataInitial());
-  List<FinanceModel> _financeModel = [];
+  List<FinanceModel> financeModel = [];
 
   fetchData(){
     emit(FetchDataLoading());
     try {
-      _financeModel = Hive
+      financeModel = Hive
           .box<FinanceModel>('financeBox')
           .values
           .toList();
@@ -20,6 +20,6 @@ class FetchDataCubit extends Cubit<FetchDataState>{
     }catch(e){
       emit(FetchDataFailure(e.toString()));
     }
-    return _financeModel;
+    return financeModel;
   }
 }
