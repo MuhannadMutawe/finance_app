@@ -1,4 +1,4 @@
-import 'package:finance/cubit/fetch_data_cubit.dart';
+import 'package:finance/cubit/fetch_data/fetch_data_cubit.dart';
 import 'package:finance/data/models/finance_model.dart';
 import 'package:finance/screens/home_screen.dart';
 import 'package:finance/screens/on_boarding_screen.dart';
@@ -10,8 +10,8 @@ import 'package:hive_flutter/hive_flutter.dart';
 
 void main() async {
   await Hive.initFlutter();
-  await Hive.openBox<FinanceModel>('financeBox');
   Hive.registerAdapter(FinanceModelAdapter());
+  await Hive.openBox<FinanceModel>('financeBox');
   runApp(const MyApp());
 }
 

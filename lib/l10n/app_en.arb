@@ -17,6 +17,7 @@
   "seeAll" : "See All",
   "allActivity" : "All Activity",
   "details" : "Details ...",
-  "done" : "Done",
+  "save" : "Save",
+  "update" : "Update",
   "cancel" : "Cancel"
 }
