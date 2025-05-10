@@ -3,6 +3,7 @@ import 'package:finance/data/models/finance_model.dart';
 import 'package:finance/screens/home_screen.dart';
 import 'package:finance/screens/on_boarding_screen.dart';
 import 'package:finance/screens/splash_screen.dart';
+import 'package:finance/utils/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_gen/gen_l10n/app_localization.dart';
@@ -24,7 +25,7 @@ class MyApp extends StatelessWidget {
       create: (context) => FetchDataCubit(),
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
-        locale: Locale('en'),
+        locale: Locale('ar'),
         supportedLocales: AppLocalizations.supportedLocales,
         localizationsDelegates: AppLocalizations.localizationsDelegates,
         home: SplashScreen(),
