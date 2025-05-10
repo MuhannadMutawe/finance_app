@@ -29,7 +29,7 @@ class HomeItemBalance extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(title,style: Theme.of(context).textTheme.bodyLarge!.copyWith(color: kWhiteColor),),
+                  Text(title,style: Theme.of(context).textTheme.titleLarge!.copyWith(color: kWhiteColor),),
                   Text(subTitle,style: Theme.of(context).textTheme.titleLarge!.copyWith(color: kWhiteColor),),
                 ],
               ),
