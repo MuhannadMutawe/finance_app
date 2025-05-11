@@ -29,7 +29,11 @@ class _SeeAllState extends State<SeeAll> {
           appBar: AppBar(
             titleSpacing: 0,
             leading: IconButton(
-                onPressed: () => Navigator.pop(context),
+                onPressed: (){
+                  BlocProvider.of<FetchDataCubit>(context)
+                      .fetchData();
+                  Navigator.pop(context);
+                },
                 icon: Icon(Icons.arrow_back_ios)),
             title: Text(AppLocalizations.of(context)!.allActivity),
           ),
