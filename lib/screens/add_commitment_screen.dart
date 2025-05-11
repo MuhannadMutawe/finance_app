@@ -52,7 +52,11 @@ class _AddCommitmentScreenState extends State<AddCommitmentScreen> {
               title: Text(widget.isPlus ? AppLocalizations.of(context)!.plus : AppLocalizations.of(context)!.minus),
               titleSpacing: 0,
               leading: IconButton(
-                onPressed: () => Navigator.pop(context),
+                onPressed: () {
+                  BlocProvider.of<FetchDataCubit>(context)
+                      .fetchData();
+                  Navigator.pop(context);
+                },
                 icon: Icon(Icons.arrow_back_ios),
               ),
             ),
