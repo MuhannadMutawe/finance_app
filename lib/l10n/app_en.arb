@@ -15,9 +15,15 @@
   "minus" : "Minus",
   "activity" : "Activity",
   "seeAll" : "See All",
+  "hi" : "Hi body 👋",
+  "symbol" : "Shakel",
+  "darkMode" : "Dark Mode",
+  "language" : "Language",
   "allActivity" : "All Activity",
   "details" : "Details ...",
   "save" : "Save",
   "update" : "Update",
-  "cancel" : "Cancel"
+  "cancel" : "Cancel",
+  "languageTitle" : "Choose Suitable language",
+  "languageSubTitle" : "Select The Language From Below"
 }
