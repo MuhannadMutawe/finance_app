@@ -50,7 +50,6 @@ class _AddCommitmentScreenState extends State<AddCommitmentScreen> {
           return Scaffold(
             appBar: AppBar(
               title: Text(widget.isPlus ? AppLocalizations.of(context)!.plus : AppLocalizations.of(context)!.minus),
-              titleSpacing: 0,
               leading: IconButton(
                 onPressed: () {
                   BlocProvider.of<FetchDataCubit>(context)

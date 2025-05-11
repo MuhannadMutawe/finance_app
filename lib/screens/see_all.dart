@@ -27,7 +27,6 @@ class _SeeAllState extends State<SeeAll> {
       builder: (BuildContext context, state) {
         return Scaffold(
           appBar: AppBar(
-            titleSpacing: 0,
             leading: IconButton(
                 onPressed: (){
                   BlocProvider.of<FetchDataCubit>(context)

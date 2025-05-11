@@ -2,6 +2,9 @@ import 'package:finance/utils/colors.dart';
 import 'package:finance/widget/on_boarding_item_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localization.dart';
+import 'package:hive_flutter/adapters.dart';
+
+import '../utils/showBottomSheet.dart';
 
 class OnBoardingScreen extends StatefulWidget {
   const OnBoardingScreen({super.key});
@@ -25,6 +28,10 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        leading: IconButton(
+          onPressed: () => showLanguageBottomSheet(context),
+          icon: Icon(Icons.language),
+        ),
         actions: [
           Padding(
             padding: EdgeInsetsDirectional.only(end: 8),
@@ -85,25 +92,37 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                   ),
                   Visibility(
                     visible: _index < 3,
-                    replacement: ElevatedButton(
-                      onPressed: () => Navigator.pushReplacementNamed(context, '/home_screen'),
-                      style: ElevatedButton.styleFrom(
-                          minimumSize: Size(double.infinity, 55),
-                          backgroundColor: kPrimaryBlue),
-                      child: Text(
-                        AppLocalizations.of(context)!.start,
-                        style: Theme.of(context)
-                            .textTheme
-                            .bodyLarge!
-                            .copyWith(color: kWhiteColor),
-                      ),
+                    replacement: ValueListenableBuilder(
+                      valueListenable:
+                          Hive.box('showOnBoardingBox').listenable(),
+                      builder: (context, value, child) {
+                        return ElevatedButton(
+                          onPressed: () {
+                            Navigator.pushReplacementNamed(
+                                context, '/home_screen');
+                            value.put('isShowOnBoarding', true);
+                          },
+                          style: ElevatedButton.styleFrom(
+                              minimumSize: Size(double.infinity, 55),
+                              backgroundColor: kPrimaryBlue),
+                          child: Text(
+                            AppLocalizations.of(context)!.start,
+                            style: Theme.of(context)
+                                .textTheme
+                                .bodyLarge!
+                                .copyWith(color: kWhiteColor),
+                          ),
+                        );
+                      },
                     ),
                     child: ElevatedButton(
-                      onPressed: () => setState(() {
-                        _pageController.nextPage(
-                            duration: Duration(milliseconds: 500),
-                            curve: Curves.ease);
-                      }),
+                      onPressed: () => setState(
+                        () {
+                          _pageController.nextPage(
+                              duration: Duration(milliseconds: 500),
+                              curve: Curves.ease);
+                        },
+                      ),
                       style: ElevatedButton.styleFrom(
                           minimumSize: Size(double.infinity, 55),
                           backgroundColor: kPrimaryBlue),
